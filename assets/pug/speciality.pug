@@ -1,0 +1,61 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'News of the page'}
+block content_block
+	+bread(['Главная', 'О центре'], 'Новости')
+	section.news 
+		.section_in 
+			.news_main 
+				//- .news_sidebar 
+				//- 	include global/sidebar
+				.news_content 
+					h1 Специалисты
+					.special_filter 
+						.special_filter--main 
+							select.special_select-1(name="special")
+								option(value="" selected) Выберите специальность
+								option(value="Уролог") Уролог
+								option(value="Хирург") Хирург  
+								option(value="Гинеколог") Гинеколог  
+								option(value="Невролог") Невролог 
+							select.special_select-2(name="city")
+								option(value="" selected) Выберите филиал
+								option(value="Симферополь") Симферополь
+								option(value="Феодосия") Феодосия  
+								option(value="Великий Новгород") Великий Новгород  
+							select.special_select-3(name="special")
+								option(value="" selected) Выберите подразделение
+								option(value="Уролог") Уролог
+								option(value="Хирург") Хирург  
+								option(value="Гинеколог") Гинеколог  
+								option(value="Невролог") Невролог
+						.special_filter--btn 
+							a(href="#") Найти 
+					ul.news_grid.speciality_list 
+						-
+							var newsGrid = [
+								{
+									img: 'doc',
+								},
+							]
+						- for(i = 0; i < 4; ++i)
+							each item in newsGrid 
+								li 
+									a(href="#").news_item--img.special_items--img 
+										img(src=`i/${item.img}.jpg`)
+									ul.news_item--lists
+										li!='Сейдалиева Эмине Казимовна'
+										li!='<span>Должность:</span> Врач-невролог'
+										li!='<span>Город:</span> Симферополь, Феодосия'
+										li!='<span>Специальность:</span> Врач-невролог'
+										li!='<span>График работы:</span> г. Симферополь понедельник, четверг, пятница с 14-00 по 18-00, г. Феодосия среда с 9-00 по 14-00'
+										.news_item--link 
+											a(href="#")
+												p Подробнее
+												+icon('link')
+					ul.news_pug
+						each item in ['1', '2', '3', '4', '5']
+							li 
+								a(href="#")=item
+	//- include global/map 

@@ -1,0 +1,25 @@
+section.rate
+	.section_in 
+		.rate_main 
+			h4 Наши услуги
+			ul.rate_grid 
+				-
+					var rateGrid = [
+						{
+							title: 'Приём врача-невролога',
+							img: 'rate',
+						},
+					]
+				- for(i = 0; i < 6; ++i)
+					each item in rateGrid
+						li 
+							.rate_item--img
+								a(href="#") 
+									img(src=`i/${item.img}.jpg`)
+							p=item.title 
+							.rate_item--link 
+								a(href="#")
+									p Подробнее
+									+icon('link')
+			.rate_grid--more 
+				a(href="#") Показать все услуги 

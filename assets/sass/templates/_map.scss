@@ -1,0 +1,11 @@
+.map {
+}
+.section_in {
+}
+.map_main {
+  margin-bottom: 9.5rem;
+  height: 40rem;
+  @include bp($point_2) {
+    height: 20rem;
+  }
+}

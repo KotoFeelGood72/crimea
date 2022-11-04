@@ -1,0 +1,266 @@
+.single_services {
+  h1 {
+    font-size: 3rem;
+    font-family: $font_3;
+    color: $dark;
+    margin-bottom: 6.4rem;
+    @include bp($point_2) {
+      margin-bottom: 3rem;
+      font-size: 2.6rem;
+    }
+  }
+  .special_main {
+    h5 {
+      font-size: 3rem;
+      font-family: $font_3;
+      margin-bottom: 5.3rem;
+      @include bp($point_2) {
+        margin-bottom: 3rem;
+        font-size: 2.6rem;
+      }
+    }
+  }
+  .special_main {
+    margin-bottom: 10rem;
+    @include bp($point_2) {
+      margin-bottom: 8rem;
+    }
+  }
+}
+.section_in {
+}
+.single_services--main {
+  display: flex;
+  margin-bottom: 6.4rem;
+  @include bp($point_2) {
+    flex-direction: column;
+    margin-bottom: 4rem;
+  }
+}
+.single_services--img {
+  min-width: 48.8rem;
+  height: 31.2rem;
+  margin-right: 10.2rem;
+  @include bp($point_2) {
+    margin-right: 0;
+    min-width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  img {
+    object-fit: cover;
+  }
+}
+.single_service--content {
+  p {
+    font-size: 2.3rem;
+    line-height: 2.8rem;
+    @include bp($point_2) {
+      font-size: 1.6rem;
+      line-height: 2.2rem;
+    }
+  }
+}
+.single_services--subtitle {
+  font-size: 2.5rem;
+  font-family: $font_2;
+  margin-bottom: 1.9rem;
+  @include bp($point_2) {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+.single_service--txt {
+  margin-bottom: 10rem;
+  @include bp($point_2) {
+    margin-bottom: 5rem;
+  }
+  ul {
+    li {
+      margin-bottom: .2rem;
+      font-size: 2.3rem;
+      position: relative;
+      @include bp($point_2) {
+        font-size: 1.6rem;
+      }
+      &:before {
+        content: '-';
+        margin-right: .4rem;
+      }
+    }
+  }
+}
+.single_service--pretitle {
+  font-size: 2.5rem;
+  font-family: $font_2;
+  margin-bottom: 1.9rem;
+  color: $dark;
+  @include bp($point_2) {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+}
+.single_services {
+  .global_form {
+    .section_in {
+      @include bp($point_2) {
+        padding: 0;
+      }
+    }
+  }
+}
+.global_form--main {
+  background: #FFFFFF;
+  box-shadow: .1rem -.6rem 6.1rem rgba(97, 137, 173, 0.25);
+  padding: 4.3rem 10.2rem 5.2rem 10.2rem;
+  display: flex;
+  border-radius: 1rem;
+  margin-bottom: 10rem;
+  @include bp($point_2) {
+    flex-direction: column;
+    padding: 2rem 1.5rem;
+    margin-bottom: 8rem;
+  }
+}
+.global_form--content {
+  margin-right: 25.7rem;
+  min-width: 37.5rem;
+  @include bp($point_2) {
+    margin-right: 0;
+    min-width: 100%;
+  }
+}
+.global_form--head {
+  @include bp($point_2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  p {
+    font-size: 2.6rem;
+    font-family: $font_2;
+    margin-bottom: 1.7rem;
+    @include bp($point_2) {
+      margin-bottom: 1rem;
+    }
+  }
+  span {
+    display: inline-flex;
+    margin-bottom: 9.3rem;
+    @include bp($point_2) {
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+  }
+}
+.global_form--check {
+  @include check;
+  @include bp($point_2) {
+    display: none;
+  }
+  input {
+    display: none;
+    &:checked + label::after {
+      transform: scale(1);
+    }
+  }
+}
+.global_forms {
+  min-width: 39.9rem;
+  text-align: center;
+  @include bp($point_2) {
+    min-width: 100%;
+  }
+}
+.global_form--input {
+  margin-bottom: 2.6rem;
+  @include bp($point_2) {
+    margin-bottom: 1rem;
+  }
+  input {
+    padding-left: 2.9rem;
+    @include bp($point_2) {
+      padding-left: 2rem;
+      min-height: 5rem;
+      font-size: 1.6rem;
+    }
+  }
+}
+.global_form--btn {
+  display: inline-flex;
+  @include btn_i;
+  justify-content: center;
+  align-items: center;
+  @include bp($point_2) {
+    margin-top: 1rem;
+  }
+  input {
+    min-height: 5.2rem;
+    font-size: 1.8rem;
+    @include bp($point_2) {
+      font-size: 1.6rem;
+      min-height: 5rem;
+    }
+  }
+}
+
+.service_price--main {
+  h5 {
+    font-size: 3rem;
+    font-family: $font_3;
+    margin-bottom: 6.4rem;
+    @include bp($point_2) {
+      margin-bottom: 3rem;
+      font-size: 2.6rem;
+
+    }
+  }
+}
+.service_price--list {
+  margin-bottom: 12rem;
+  @include bp($point_2) {
+    margin-bottom: 8rem;
+  }
+  li {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border-top: .1rem solid rgba(105, 129, 212, 0.56);
+    border-left: .1rem solid rgba(105, 129, 212, 0.56);
+    border-right: .1rem solid rgba(105, 129, 212, 0.56);
+    @include bp($point_2) {
+      grid-template-columns: 70% 30%;
+    }
+    p {
+      padding: 1.4rem 5rem;
+      @include bp($point_2) {
+        padding: 1.2rem 1.5rem;
+      }
+    }
+    &:first-child {
+      background-color: rgba(105, 129, 212, 0.3);
+      p {
+        &:after {
+          display: none;
+        }
+      }
+    }
+    &:last-child {
+      border-bottom: .1rem solid rgba(105, 129, 212, 0.56);
+    }
+  }
+}
+.service_item--title {
+}
+.service_item--price {
+  width: 100%;
+  height: 100%;
+  border-left: .1rem solid rgba(105, 129, 212, 0.56);
+  position: relative;
+  &:after {
+    content: '₽';
+    margin-left: .2rem;
+    font-family: $font_2;
+  }
+}

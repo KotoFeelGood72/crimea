@@ -1,0 +1,44 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'FAQ of the page'}
+block content_block
+	+bread(['Главная', 'Пациенту'], 'Вопрос-ответ')
+	section.faq 
+		.section_in 
+			.faq_main 
+				.faq_content 
+					h1 Вопрос-ответ
+					.faq_filter--head
+						.special_filter--main.faq_filter--main 
+							select.special_filter--main
+								option(value="" selected) Все разделы 
+								option(value="Медицинская деятельность") Медицинская деятельность
+								option(value="Медицинская деятельность") Медицинская деятельность
+								option(value="Медицинская деятельность") Медицинская деятельность
+							.special_filter--btn 
+								a(href="#") Найти 
+						.faq_ask_action 
+							button(type="button")
+								p Задать вопрос
+								+icon('link')
+					ul.faq_list 
+						-
+							var faqGrid = [
+								{
+									title: 'Нас интересует, есть ли возможность принять на реабилитацию Варвару, что для этого требуется, возможно ли бесплатно пройти реабилитацию?',
+									txt: 'Добрый день. Для уточнения информации, пожалуйста, позвоните по телефону +7-978-142-02-42 или пришлите сканы выписок по адресу info@reacenter-crimea.ru Мы можем Вам помочь с жильем. Комнаты расчитаны на маму с ребенком и находятся в шаговой доступности.',
+								},
+							]
+						- for(i = 0; i < 4; ++i)
+							each item in faqGrid 
+								li.faq_list--item
+									.faq_title 
+										p=item.title
+									.faq_btn--more Показать ответ
+									.faq_txt 
+										p=item.txt
+					ul.news_pug
+						each item in ['1', '2', '3', '4', '5']
+							li 
+								a(href="#")=item

@@ -1,0 +1,22 @@
+// Futura New Fonts
+
+@include font_face('FuturaNewLight-Reg', 'FuturaNewLight-Reg', $font_path, 300);
+//
+@include font_face('FuturaNewBook-Reg', 'FuturaNewBook-Reg', $font_path, 450);
+//
+@include font_face('FuturaNewDemi-Reg', 'FuturaNewDemi-Reg', $font_path, 650);
+//
+@include font_face('FuturaNewHeavy-Reg', 'FuturaNewHeavy-Reg', $font_path, 700);
+//
+@include font_face('FuturaNewMedium-Reg', 'FuturaNewMedium-Reg', $font_path, 500);
+
+// Montserrat Fonts
+
+@include font_face('Montserrat-Regular', 'Montserrat-Regular', $font_path, 400);
+//
+@include font_face('Montserrat-SemiBold', 'Montserrat-SemiBold', $font_path, 600);
+//
+@include font_face('Montserrat-Bold', 'Montserrat-Bold', $font_path, 700);
+
+
+

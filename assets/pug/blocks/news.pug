@@ -1,0 +1,29 @@
+section.home_news
+	.section_in 
+		.home_news--main 
+			h6 Новости
+			ul.home_news--grid
+				-
+					var homeNews = [
+						{
+							title: 'Комплексная микротоковая и квантовая рефлексотерапия',
+							date: '24.05.2021',
+							img: 'rate',
+						},
+					]
+				- for(i = 0; i < 3; ++i)
+					each item in homeNews
+						li 
+							.home_news--img
+								a(href="#") 
+									img(src=`i/${item.img}.jpg`)
+							.home_news--content 
+								span=item.date
+								a(href="#")  
+									p=item.title 
+								.home_news--link 
+									a(href="#")
+										p Подробнее
+										+icon('link')
+			.home_news--btn 
+				a(href="#") Все новости 

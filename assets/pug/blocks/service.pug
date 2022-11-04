@@ -1,0 +1,39 @@
+section.service_w
+	.sectionTitle 
+		h3 Наши преимущества
+	.service
+		.section_in 
+			.service_main 
+				ul.service_list 
+					-
+						var serviceList = [
+							{
+								title: '900',
+								txt: 'Клиентов в месяц',
+								img: 'service_1'
+							},
+							{
+								title: '50',
+								txt: 'полученных Наград',
+								img: 'service_2'
+							},
+							{
+								title: '100%',
+								txt: 'Довольных клиентов',
+								img: 'service_3'
+							},
+							{
+								title: '100 тыс.',
+								txt: 'Клиентов',
+								img: 'service_4'
+							},
+						]
+					each item in serviceList 
+						li 
+							.service_item--img 
+								img(src=`i/${item.img}.png`)
+							.service_item--content 
+								p=item.title 
+								span=item.txt
+	.service_btn_more 
+		button(type="button") Записаться на прием

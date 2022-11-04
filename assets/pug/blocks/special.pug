@@ -1,0 +1,20 @@
+section.special
+	.section_w 
+		.special_main 
+			h5 Специалисты
+			.special_slider.swiper-container 
+				.swiper-wrapper
+					- for(i = 0; i < 6; ++i) 
+						.swiper-slide 
+							.special_slide--w 
+								.special_slide--img 
+									img(src="i/small.jpg")
+								.special_content 
+									p.special_item--name Сейдалиева Эмине Казимовна
+									p.special_item--prof врач функциональной диагностики
+									span г. Симферополь
+									.special_item--btn 
+										a(href="#") Подробнее 
+			.special_pug 
+			.special_btn--more 
+				a(href="#") Все специалисты 

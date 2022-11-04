@@ -1,0 +1,38 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'News of the page'}
+block content_block
+	+bread(['Главная', 'О центре'], 'Новости')
+	section.special_single 
+		.section_in 
+			.special_single--main 
+				//- .news_sidebar 
+				//- 	+sidebar()
+				.special_single--content 
+					h1 Сейдалиева Эмине Казимовна
+					.special_single--w
+						.special_single--card 
+							.special_card--img 
+								img(src="i/single.jpg")
+							.special_card--content 
+								ul.special_card--list 
+									li!='<span>График работы:</span> г. Симферополь понедельник, четверг, пятница с 14-00 по 18-00, г. Феодосия среда с 9-00 по 14-00'
+									li!='<span>Город:</span> Симферополь'
+									li!='<span>Должность:</span> Врач-невролог'
+									li!='<span>Сертификат специалиста:</span> 0182180606776 рег. №08/1345 от 31.10.2016 года - «Неврология»'
+									li!='<span>Образование:</span> Крымский государственный медицинский институт/1995 г. «Неврология»'
+							.singleSpecial_btn 
+								button(type="button") Записаться на прием
+						//- .special_single--nav 
+						//- 	.special_single--left 
+						//- 		a(href="#") 
+						//- 			+icon('small_left')
+						//- 			p!='Пред. сотрудник'
+						//- 	.special_single--right 
+						//- 		a(href="#")
+						//- 			p!='След. сотрудник'
+						//- 			+icon('small_right')
+							  
+
+	//- include global/map 

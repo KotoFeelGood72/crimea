@@ -1,0 +1,25 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'News of the page'}
+block content_block
+	+bread(['Главная', 'О центре'], 'Новости')
+	section.contacts 
+		.section_in 
+			.contacts_main 
+				.contacts_content 
+					h1 Контакты организации
+					ul.contacts_list
+						- for(i = 0; i < 3; ++i)
+							li
+								.contacts_item--map <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2835eb40225bfc7658d0e586ce35732c93dd4602c85c12a866da3bc161f0ca37&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+								.contacts_item--content
+									ul.contact_item--list
+										li
+											p!='<strong>Адрес:</strong> г. Симферополь, ул.Володарского, 32'
+										li
+											p!='<strong>Телефон:</strong> <a href="#">+7 (978) 142-02-42</a>'
+										li
+											p!='<strong>E-mail:</strong> <a href="#">info@reacenter-crimea.ru</a>'
+
+	include global/form

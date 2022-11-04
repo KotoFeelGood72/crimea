@@ -1,0 +1,209 @@
+// Navigation link
+
+@mixin nav {
+  position: relative;
+  a {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+		color: $white;
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-bottom: .2rem solid $violet;
+      content: '';
+      height: 100%;
+      width: 0%;
+      pointer-events: none;
+      z-index: -1;
+    }
+    &:hover {
+			opacity: .7;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// BTN
+@mixin btn {
+  position: relative;
+  @include bp($point_2) {
+    width: 100%;
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    font-family: $font_1m;
+    position: relative;
+    border: .1rem solid $violet;
+    min-height: 6.4rem;
+    min-width: 21.3rem;
+    @include bp($point_2) {
+      min-width: 100%;
+      min-height: 5rem;
+      font-size: 1.6rem;
+      background-color: $violet;
+      color: $white;
+    }
+    &:hover {
+      background-color: $violet;
+      color: $white;
+    }
+  }
+}
+
+// BTN INPUT
+@mixin btn_i {
+  position: relative;
+  @include bp($point_2) {
+    width: 100%;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5rem;
+    font-family: $font_1m;
+    color: $violet;
+    position: relative;
+    border: .1rem solid $violet;
+    min-height: 6.4rem;
+    min-width: 21.3rem;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all .3s ease;
+    font-size: 2rem;
+    @include bp($point_2) {
+      min-width: 100%;
+      min-height: 5rem;
+      font-size: 1.6rem;
+      background-color: $violet;
+      color: $white;
+    }
+    &:hover {
+      background-color: $violet;
+      color: $white;
+    }
+  }
+}
+
+// Checkbox
+@mixin check {
+  width: 100%;
+  margin-bottom: 2.3rem;
+  label {
+    position: relative;
+    padding-left: 4.6rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    @include bp($point_2) {
+      padding-left: 3rem;
+    }
+    p {
+      font-size: 1.8rem;
+      font-family: $font_11;
+      @include bp($point_2) {
+        font-size: 1.6rem;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: -.2rem;
+      left: 0;
+      background-color: #F1F1F1;
+      border-radius: .5rem;
+      width: 2.7rem;
+      height: 2.7rem;
+      @include bp($point_2) {
+        width: 2rem;
+        height: 2rem;
+        top: 0;
+      }
+    }
+    &:after {
+      position: absolute;
+      top: .3rem;
+      left: .5rem;
+      content: '';
+      width: 1.6rem;
+      height: 1.6rem;
+      background-image: url('../../i/vector/close.svg');
+      transform: scale(0);
+      @include bp($point_2) {
+        width: 1rem;
+        height: 1rem;
+        background-size: contain;
+        top: .5rem;
+      }
+    }
+  }
+}
+
+
+
+
+@mixin checks {
+	label {
+		position: relative;
+		padding-left: 4.2rem;
+		font-size: 1.8rem;
+		color: #616161;
+		font-family: $font_11;
+		font-weight: 300;
+		cursor: pointer;
+		user-select: none;
+		z-index: 3;
+		&:before {
+			width: 2.7rem;
+			height: 2.7rem;
+			background-color: #f1f1f1;
+			border-radius: 0.5rem;
+			border: .1rem solid #cccccc;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '';
+			// background-image: url('../../i/vector/crest.svg');
+		}
+		&:after {
+			width: 1.5rem;
+			height: 1.5rem;
+			position: absolute;
+			left: .6rem;
+			top: 50%;
+			transform: translateY(-50%);
+			content: '';
+			background-image: url('../../i/vector/crest.svg');
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: center center;
+			opacity: 0;
+			visibility: hidden;
+			z-index: 2;
+			transform-origin: center center;
+		}
+	}
+	& input {
+		display: none;
+		&:checked + label:after {
+			transform: translateY(-50%);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

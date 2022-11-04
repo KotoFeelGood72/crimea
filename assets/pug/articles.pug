@@ -1,0 +1,44 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Articles of the page'}
+block content_block
+	+bread(['Главная', 'О центре'], 'Новости')
+	section.news 
+		.section_in 
+			.news_main 
+				.news_sidebar 
+					include global/sidebar
+				.news_content 
+					h1 Статьи
+					ul.news_grid 
+						-
+							var newsGrid = [
+								{
+									date: '24.05.2021',
+									title: 'Комплексная микротоковая и квантовая рефлексотерапия',
+									txt: 'Комплексная микротоковая и квантовая рефлексотерапия будет стоить 25 000 для пациентов из регионов: Великий Новгород...',
+									img: 'rate',
+								},
+							]
+						- for(i = 0; i < 4; ++i)
+							each item in newsGrid 
+								li 
+									a(href="#").news_item--img 
+										img(src=`i/${item.img}.jpg`)
+									.news_item--content 
+										.news_item--date 
+											p=item.date 
+										a(href="#").news_item--title
+											h3=item.title 
+										.news_item--txt 
+											p=item.txt 
+										.news_item--link 
+											a(href="#")
+												p Подробнее
+												+icon('link')
+					ul.news_pug
+						each item in ['1', '2', '3', '4', '5']
+							li 
+								a(href="#")=item
+	include global/map 

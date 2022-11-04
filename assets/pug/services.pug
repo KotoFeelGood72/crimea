@@ -1,0 +1,38 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Services of the page'}
+block content_block
+	+bread(['Главная', 'Услуги'], 'Прием специалистов')
+	section.news 
+		.section_in 
+			.news_main 
+				.news_sidebar 
+					include global/sidebar
+				.news_content 
+					h1 Прием специалистов
+					ul.services_grid 
+						-
+							var servicesGrid = [
+								{
+									title: 'Приём врача-невролога',
+									img: 'rate',
+								},
+							]
+						- for(i = 0; i < 3; ++i)
+							each item in servicesGrid 
+								li 
+									a(href="#").services_item--img 
+										img(src=`i/${item.img}.jpg`)
+									.services_item--content 
+										.services_item--date 
+											p=item.date 
+										a(href="#").services_item--title
+											h3=item.title 
+										.services_item--txt 
+											p=item.txt 
+										.services_item--link 
+											a(href="#")
+												p Подробнее
+												+icon('link')
+	include global/map 

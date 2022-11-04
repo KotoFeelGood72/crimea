@@ -1,0 +1,63 @@
+section.popup_succes 
+  .popup_succes--main
+    .popup_succes--close 
+      img(src="i/vector/close.svg", alt="")
+    .popup_succes--icon 
+      +icon('like')
+    h3 Ваша заявка успешно отправлена
+    p Наш менеджер перезвонит вам в ближайшее время
+
+// Header popup Mobile
+.header_popup--window
+  .header_popup--main
+    ul.header_popup 
+      li.header_popup--item 
+        a(href="#").header_popup--link Главная
+      li.header_popup--item  
+        a(href="#").header_popup--link О центре
+        ul.header_submenu--popup
+          each item in ['Element 1']
+            - for(i = 0; i < 5; ++i)
+              li 
+                a(href="#")=item 
+      li.header_popup--item  
+        a(href="#").header_popup--link Услуги
+        ul.header_submenu--popup
+          each item in ['Element 1']
+            - for(i = 0; i < 5; ++i)
+              li 
+                a(href="#")=item
+      li.header_popup--item  
+        a(href="#").header_popup--link Специалисты
+        ul.header_submenu--popup
+          each item in ['Element 1']
+            - for(i = 0; i < 5; ++i)
+              li 
+                a(href="#")=item
+      li.header_popup--item  
+        a(href="#").header_popup--link Пациенту
+        ul.header_submenu--popup
+          each item in ['Element 1']
+            - for(i = 0; i < 5; ++i)
+              li 
+                a(href="#")=item
+      li.header_popup--item  
+        a(href="#").header_popup--link Статьи
+      li.header_popup--item  
+        a(href="#").header_popup--link Контакты
+        ul.header_submenu--popup
+          each item in ['Element 1']
+            - for(i = 0; i < 5; ++i)
+              li 
+                a(href="#")=item
+    ul.header_popup--info 
+      li 
+        p Адрес: г. Симферополь, ул.Володарского д.32
+      li 
+        a(href="#")
+          p Телефон
+          span +7 (978)142-02-42
+      li 
+        a(href="#")
+          p Email:
+          span info@reacenter-crimea.ru

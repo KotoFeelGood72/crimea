@@ -1,0 +1,8 @@
+section.gos
+	.section_in 
+		.gos_main 
+			ul.gos_list 
+				- var gos = [{img: 'gos_1'},{img: 'gos_2'},{img: 'gos_3'},{img: 'gos_4'},{img: 'gos_5'}]
+				each item, index in gos
+					li 
+						img(src=`i/${item.img}.jpg`)

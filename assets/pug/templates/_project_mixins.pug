@@ -1,0 +1,95 @@
+// Хлебные крошки
+
+mixin bread(items, last)
+	section.bread 
+		.section_in 
+			.bread_main 
+				ul.bread_list 
+					each item in items
+						li 
+							if (items.length === 1)
+								a(href="#")=item
+							else
+								a(href="#")=item
+					if last
+						li.breadcrumb__item
+							p=last
+					else
+
+
+// Sidebar
+
+mixin sidebar(data)
+	section.sidebar
+		ul.sidebar_list 
+			each item in ['Специалисты', 'Администрация', 'Вакансии']
+				li 
+					a(href="#")=item
+		.sidebar_trend 
+			ul.sidebar_trend--list 
+				li 
+					a(href="#")
+						.sidebar_trend--img 
+							img(src="i/action.jpg")
+						p Запись к врачу
+				li 
+					a(href="#")
+						.sidebar_card--img 
+							img(src="i/gos_6.jpg") 
+
+
+
+mixin navigation(data)
+	nav.header_nav_w
+		ul.header_nav
+			-
+				var menu = [
+					{
+						title: 'Главная',
+						submenu: false,
+					},
+					{
+						title: 'Услуги',
+						submenu: true,
+					},
+					{
+						title: 'Специалисты',
+						submenu: false,
+					},
+					{
+						title: 'Пациенту',
+						submenu: true,
+					},
+					{
+						title: 'Фонд',
+						submenu: true,
+					},
+					{
+						title: 'О центре',
+						submenu: true,
+					},
+					{
+						title: 'Отзывы',
+						submenu: false,
+					},
+					{
+						title: 'Новости',
+						submenu: false,
+					},
+					{
+						title: 'Контакты',
+						submenu: false,
+					},
+				]
+			each item in menu
+				if item.submenu != true
+					li.header_nav--item 
+						a(href="#").header_nav--link=item.title
+				else
+					li.header_nav--item  
+						a(href="#").header_nav--link=item.title
+						ul.header_submenu
+							each item in ['Element 1']
+								- for(i = 0; i < 5; ++i)
+									li 
+										a(href="#")=item

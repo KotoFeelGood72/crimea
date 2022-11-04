@@ -1,0 +1,45 @@
+// variables,mixins,extends
+@import "helpers/helpers_all";
+@import "family";
+
+// base
+@import "reset";
+@import "fonts";
+@import "base";
+@import "main";
+@import "print";
+
+// blocks
+@import "header";
+@import "footer";
+@import "forms";
+@import "blocks/sections";
+@import "blocks/all_icons";
+
+// icons
+@import "icons";
+@import "sprite";
+
+// plugins
+
+@import "plugins/choices.min";
+@import "plugins/swiper-bundle";
+
+// page
+
+@import "page/home";
+@import "page/news";
+@import "page/rate";
+@import "page/single-service";
+@import "page/spec";
+@import "page/articles";
+@import "page/single-spec";
+@import "page/contacts";
+@import "page/faq";
+
+// Templates
+
+@import "templates/bread";
+@import "templates/sidebar";
+@import "templates/map";
+@import "templates/popup";

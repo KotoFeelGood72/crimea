@@ -1,0 +1,23 @@
+section.hero
+	.hero_main 
+		.hero_slider.swiper-container 
+			.swiper-wrapper
+				- for(i = 0; i < 5; ++i) 
+					.swiper-slide
+						.hero_img--w 
+							img(src="i/hero.jpg")
+						.section_in
+							.hero_slide 
+								h1 Получите бесплатную консультацию
+								.hero_form 
+									form(action="#")
+										.hero_form_input 
+											input(type="text" placeholder="Ваше имя")
+										.hero_form_input 
+											input(type="tel" placeholder="Ваш номер телефона")
+										.hero_form_check 
+											input(type="checkbox" id=`heroCheck${i}` name=`heroCheck${i}`)
+											label(for=`heroCheck${i}`) Cогласен на обработку персональных данных
+										.hero_form_btn 	
+											button(type="submit") Записаться на прием
+			.hero_pug

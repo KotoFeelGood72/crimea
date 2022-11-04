@@ -1,0 +1,27 @@
+header.header 
+	.section_in 
+		.header_main_w 
+			.header_main_top
+				.header_logo_w 
+					.header_logo
+						a(href="#")  
+							img(src="i/logo.svg")
+					ul.header_logo_contact 
+						li 
+							a(href="#") +7 (978)142-02-42
+						li 
+							a(href="#") info@reacenter-crimea.ru
+				.header_contact_w 
+					ul.header_list
+						-for(i = 0; i < 4; i++)
+							li 
+								.header_contact_icon 
+									+icon('map')
+								.header_address г. Симферополь, ул. Володарского, 32
+			.header_main_bottom
+				+navigation
+				.header_nav--open 
+					span 
+					span 
+					span
+

@@ -1,0 +1,43 @@
+footer.footer
+	.section_in 
+		.footer_main 
+			.footer_brand 
+				.footer_logo--img
+					a(href="#")  
+						img(src="i/logo.png")
+				.footer_logo--w 
+					img(src="i/vector/logo.svg")
+			ul.footer_logo--nav
+				each item in ['Главная', 'О центре', 'Услуги', 'Специалисты', 'Пациенту', 'Статьи', 'Контакты']
+					li 
+						a(href="#")=item
+			.footer_form 
+				.footer_form--input 
+					input(type="text" placeholder="Имя") 
+				.footer_form--input 
+					input(type="tel" placeholder="Телефон") 
+				.footer_form--text 
+					textarea(placeholder="Сообщение")
+				.footer_form--btn 
+					input(type="submit", value="Отправить")
+			.footer_info 
+				ul.footer_address 
+					li 
+						p Адрес: г. Симферополь, ул.Володарского д.32
+					li 
+						a(href="#")
+							p Телефон
+							span +7 (978)142-02-42
+					li 
+						a(href="#")
+							p Email:
+							span info@reacenter-crimea.ru
+				.footer_info--policy 
+					a(href="#") Политика конфиденциальности
+		.footer_bottom 
+			.footer_bottom--copyright ООО «Реацентр Крым» 2021
+			.footer_bottom--brend
+				a(href="#")
+					p Разработано arkada-web.ru
+					.footer_bottom--logo 
+						img(src="i/ark-logo.png")

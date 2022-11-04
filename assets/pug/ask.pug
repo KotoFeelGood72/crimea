@@ -1,0 +1,39 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'ASK of the page'}
+block content_block
+	+bread(['Главная', 'О центре'], 'Новости')
+	section.ask 
+		.section_in 
+			.ask_main 
+				.ask_sidebar 
+					include global/sidebar
+				.ask_content 
+					h1 Задать вопрос
+					.ask_form
+						.ask_form--input
+							label(for="ask_1")
+								p Вопрос
+							textarea(placeholder="Ваш вопрос" id="ask_1")
+						.ask_form--select
+							label(for="ask_2")
+								p Категория
+							select#ask_2
+								option(value="" selected) Выберите категорию 
+								option(value="Выберите категорию") Расписание 
+								option(value="Выберите категорию") Расписание 
+								option(value="Выберите категорию") Расписание 
+						.ask_form--input.faq_ask
+							label(for="ask_3")
+								p Тема
+							input(type="text" placeholder="Введите тематику вопроса" id="ask_3")
+						.ask_form--check 
+							input(type="checkbox" id="ask_check")
+							label(for="ask_check") 
+								p Cогласен на обработку персональных данных
+						.ask_form--btn 
+							input(type="submit", value="Отправить")
+
+
+	include global/map 
