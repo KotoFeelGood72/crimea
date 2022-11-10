@@ -4,22 +4,22 @@ footer.footer
 			.footer_brand 
 				.footer_logo--img
 					a(href="#")  
-						img(src="i/logo.png")
+						img(src="i/logo.svg")
 				.footer_logo--w 
 					img(src="i/vector/logo.svg")
 			ul.footer_logo--nav
 				each item in ['Главная', 'О центре', 'Услуги', 'Специалисты', 'Пациенту', 'Статьи', 'Контакты']
 					li 
 						a(href="#")=item
-			.footer_form 
+			form(action="").footer_form 
 				.footer_form--input 
 					input(type="text" placeholder="Имя") 
 				.footer_form--input 
 					input(type="tel" placeholder="Телефон") 
 				.footer_form--text 
 					textarea(placeholder="Сообщение")
-				.footer_form--btn 
-					input(type="submit", value="Отправить")
+				.footer_form--btn.forms_submit 
+					button(type="submit") Отправить
 			.footer_info 
 				ul.footer_address 
 					li 

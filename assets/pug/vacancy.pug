@@ -1,0 +1,29 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'News of the page'}
+block content_block
+	+bread(['Главная'], 'Вакансии')
+	section.vacancy 
+		.section_in 
+			.vacancy_main 
+				h1 Вакансии
+				ul.vacancy_list 
+					-for(i = 0; i < 5; i++)
+						li.vacancy_item 
+							h3 Врач-педиатр
+							.vacancy_item_txt.global_txt_block 
+								p Требования к специалисту:
+								ul 
+									li - Высшее профессиональное образование;
+									li - Наличие действующего сертификата;
+									li - Компетентность в избранной области деятельности;
+									li - Ответственность за результаты своей работы;
+									li - Требовательность к себе и подчиненным;
+									li - Доброжелательность к пациентам.
+								p Условия работы:
+								p График работы: полный рабочий день
+								p Зарплата: по результатам собеседования
+							.vacancy_item_link 
+								button(type="button") Заполнить анкету
+								

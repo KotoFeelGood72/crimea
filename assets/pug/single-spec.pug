@@ -7,8 +7,6 @@ block content_block
 	section.special_single 
 		.section_in 
 			.special_single--main 
-				//- .news_sidebar 
-				//- 	+sidebar()
 				.special_single--content 
 					h1 Сейдалиева Эмине Казимовна
 					.special_single--w
@@ -22,17 +20,5 @@ block content_block
 									li!='<span>Должность:</span> Врач-невролог'
 									li!='<span>Сертификат специалиста:</span> 0182180606776 рег. №08/1345 от 31.10.2016 года - «Неврология»'
 									li!='<span>Образование:</span> Крымский государственный медицинский институт/1995 г. «Неврология»'
-							.singleSpecial_btn 
-								button(type="button") Записаться на прием
-						//- .special_single--nav 
-						//- 	.special_single--left 
-						//- 		a(href="#") 
-						//- 			+icon('small_left')
-						//- 			p!='Пред. сотрудник'
-						//- 	.special_single--right 
-						//- 		a(href="#")
-						//- 			p!='След. сотрудник'
-						//- 			+icon('small_right')
-							  
-
-	//- include global/map 
+								.singleSpecial_btn.trigger_record 
+									button(type="button") Записаться на прием

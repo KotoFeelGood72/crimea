@@ -63,7 +63,7 @@
 }
 .special_filter--btn {
   @include btn;
-  a {
+  button {
     min-height: 5.2rem;
     font-size: 1.8rem;
     @include bp($point_2) {

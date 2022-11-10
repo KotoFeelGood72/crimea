@@ -7,8 +7,6 @@ block content_block
 	section.news 
 		.section_in 
 			.news_main 
-				.news_sidebar 
-					include global/sidebar
 				.news_content 
 					h1 Статьи
 					ul.news_grid 
@@ -41,4 +39,3 @@ block content_block
 						each item in ['1', '2', '3', '4', '5']
 							li 
 								a(href="#")=item
-	include global/map 

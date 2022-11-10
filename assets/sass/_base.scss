@@ -82,9 +82,3 @@ a {
 }
 
 //------------------------------------------------------------base styles###
-
-.widget_wrap {
-	@include bp($point_2) {
-		display: none;
-	}
-}

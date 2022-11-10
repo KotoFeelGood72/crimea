@@ -1,0 +1,11 @@
+extends _layout
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Articles of the page'}
+block content_block
+	section.notFound 
+		.section_in 
+			.notFound_main 
+				h1 Ошибка 404
+				h2 Запрашивемая страница не найдеена, или такой страницы на сайте не существует
+				.notFound_back_link 
+					a(href="/") Вернуться на сайт  

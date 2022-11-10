@@ -1,0 +1,16 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Record of the page'}
+block content_block
+	+bread(['Главная'], 'Запись на прием')
+	section.record 
+		.section_in 
+			.record_main 
+				h1 Запись на прием
+				.record_content_txt.global_txt_block 
+					p Записаться на прием к нашим специалистам можно с понедельника по пятницу (за исключением праздничных дней) с 9:00 до 18:00 по телефонам:
+					ul 
+						li!='г. Симферополь: <a href="#">+7 (978) 142-02-42</a>' 
+						li!='г. Феодосия: <a href="#">+7 (978) 142 02 00</a>'
+		include global/form

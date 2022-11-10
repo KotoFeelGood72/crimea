@@ -109,7 +109,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 75%;
+  width: 100%;
   height: 100%;
   @include z-index(popup);
   display: flex;
@@ -128,11 +128,31 @@
 .header_popup--main {
   background-color: $white;
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 4rem 2rem;
   transition: all .3s ease;
   transform: translateX(-1rem);
   transition: all .3s ease;
-  overflow-y: scroll;
+  overflow: scroll;
+	max-width: 35rem;
+	.header_logo {
+		height: auto;
+		margin-bottom: 3rem;
+	}
+	.header_close {
+		position: absolute;
+		top: 5rem;
+		right: 2rem;
+		width: 2rem;
+		height: 2rem;
+		button {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 100%;
+			color: #DF0000;
+		}
+	}
 }
 .header_popup--item {
   border-bottom: .1rem solid rgba(221, 221, 221, 0.356);
@@ -157,7 +177,7 @@
     position: absolute;
     top: 50%;
     right: -2rem;
-    background-image: url('../../i/vector/down.svg');
+    background-image: url('../../i/vector/down_blue.svg');
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -198,4 +218,301 @@
 .header_popup {
   margin-bottom: 2rem;
 
+}
+
+
+
+
+
+
+
+.req_form {
+	@include popup-standart;
+}
+.req_form_bg {
+	@include popup_bg;
+}
+.req_remove {
+}
+.req_form_main {
+	position: relative;
+	background-color: $white;
+	max-width: 79.2rem;
+	width: 100%;
+	padding: 5rem 10.1rem 6rem 10.1rem;
+	border-radius: 1rem;
+	box-shadow: .1rem -.6rem 6.1rem rgba(97, 137, 173, 0.25);
+}
+.req_form_close {
+	width: 2.6rem;
+	height: 2.6rem;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	button {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		color: #DF0000;
+		transition: all .3s ease;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+.icon {
+}
+.icon-close {
+}
+.req_form_action {
+}
+.req_input {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 3rem;
+
+	label {
+		font-size: 2.4rem;
+		font-family: $font_2;
+		font-weight: 500;
+		color: $dark;
+		display: flex;
+		margin-bottom: 2rem;
+	}
+
+	textarea {
+		@include app;
+		background-color: #F6F6F6;
+		font-size: 1.8rem;
+		padding: 2rem 3rem;
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+		height: 12.5rem;
+	}
+}
+.req_input_textarea {
+}
+.req_input_select {
+
+  .choices[data-type*=select-one]:after {
+    border: none;
+    width: 1.2rem;
+    height: 1.5rem;
+    background-image: url('../../i/vector/dow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 3rem;
+
+  }
+  .choices[data-type*=select-one].is-open:after {
+    border: none;
+    width: 1.2rem;
+    height: 1.5rem;
+    background-image: url('../../i/vector/dow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 3rem;
+    transform: rotate(180deg);
+    margin-top: -1rem;
+
+  }
+  .choices__list {
+    border-radius: 2rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    background-color: #F6F6F6!important;
+
+  }
+  .choices__item.is-highlighted {
+    background-color: #e9e8e8!important;
+  }
+  .choices__item {
+    font-family: $font_11;
+    font-size: 1.8rem;
+    padding-left: 2.9rem;
+    @include bp($point_2) {
+      font-size: 1.6rem;
+    }
+  }
+  .choices {
+    border-radius: 5rem;
+		width: 100%;
+		height: 100%;
+
+    &.is-open {
+      border-bottom-right-radius: 0!important;
+      border-bottom-left-radius: 0!important;
+      .choices__inner {
+        border-radius: 2rem!important;
+        border-bottom-right-radius: 0!important;
+        border-bottom-left-radius: 0!important;
+      }
+    }
+    .choices__inner {
+      border: none;
+      border-radius: 5rem;
+      background-color: #F6F6F6!important;
+      padding: 0!important;
+    }
+    .choices__list--single {
+      padding: 1.5rem 0!important
+    }
+  }
+}
+.request_checkbox {
+}
+.global_form--check {
+}
+.req_submit {
+	max-width: 18.7rem;
+	button {
+		@include btn-standart;
+		padding: 1.5rem 4.3rem;
+		font-size: 1.8rem;
+	}
+}
+.prof_form, .record_form {
+	@include popup-standart;
+}
+.prof_form_bg, .record_form_bg {
+	@include popup_bg;
+}
+.rec_remove {
+}
+.prof_form_main, .record_form_main {
+	position: relative;
+	background-color: $white;
+	padding: 5rem 10.1rem 6rem 10.1rem;
+	border-radius: 1rem;
+	box-shadow: .1rem -.6rem 6.1rem rgba(97, 137, 173, 0.25);
+	max-width: 82.1rem;
+	width: 100%;
+}
+.prof_form_close, .record_form_close {
+	width: 2.6rem;
+	height: 2.6rem;
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	button {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		color: #DF0000;
+		transition: all .3s ease;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}
+.prof_form_action {
+}
+.prof_input, .record_input {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-bottom: 3rem;
+
+	label {
+		font-size: 2.4rem;
+		font-family: $font_2;
+		font-weight: 500;
+		color: $dark;
+		display: flex;
+		margin-bottom: 2rem;
+	}
+
+	textarea {
+		@include app;
+		background-color: #F6F6F6;
+		font-size: 1.8rem;
+		padding: 2rem 3rem;
+		width: 100%;
+		height: 100%;
+		border-radius: 1rem;
+		height: 12.5rem;
+	}
+
+	input {
+		padding: 1.4rem 3rem;
+		border-radius: 5rem;
+		@include app;
+		background-color: #F6F6F6;
+		font-size: 1.8rem;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.prof_submit, .record_submit {
+	max-width: 18.7rem;
+	button {
+		@include btn-standart;
+		padding: 1.5rem 4.3rem;
+		font-size: 1.8rem;
+	}
+}
+.record_submit  {
+	max-width: 30rem;
+}
+
+.popup_burger_address {
+	margin-bottom: 3rem;
+	.header_contact_w {
+		display: block;
+		padding: 1rem;
+		&.active {
+			border-radius: 1rem 1rem 0 0;
+			.header_list {
+				border-radius: 0 0 1rem 1rem;
+				display: block;
+			}
+		}
+	}
+	.header_contact_icon {
+		display: none;
+	}
+	.header_city_single {
+		padding-left: 0;
+		&:after {
+			bottom: auto;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		.header_address {
+			font-size: 1.4rem;
+		}
+		&:after {
+			width: 1rem;
+		}
+	}
+	.header_city_item {
+		padding: 1rem;
+		font-size: 1.2rem;
+	}
+	.header_list {
+		top: 100%;
+		opacity: 1;
+		visibility: visible;
+		display: none;
+	}
+}
+
+
+
+.header_popup_bg {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: $violet;
+	opacity: .4;
 }

@@ -16,8 +16,8 @@ block content_block
 								option(value="Медицинская деятельность") Медицинская деятельность
 								option(value="Медицинская деятельность") Медицинская деятельность
 								option(value="Медицинская деятельность") Медицинская деятельность
-							.special_filter--btn 
-								a(href="#") Найти 
+							.special_filter--btn
+								button(type="submit") Найти
 						.faq_ask_action 
 							button(type="button")
 								p Задать вопрос
@@ -36,7 +36,7 @@ block content_block
 									.faq_title 
 										p=item.title
 									.faq_btn--more Показать ответ
-									.faq_txt 
+									.faq_txt.global_txt_block 
 										p=item.txt
 					ul.news_pug
 						each item in ['1', '2', '3', '4', '5']

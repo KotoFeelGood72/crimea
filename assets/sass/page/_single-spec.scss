@@ -4,14 +4,13 @@
 }
 .special_single--main {
   display: flex;
-  margin-bottom: 12rem;
+  margin-bottom: 9.5rem;
   @include bp($point_2) {
     margin-bottom: 8rem;
   }
 }
 .special_single--card {
   display: flex;
-  margin-bottom: 5.7rem;
   @include bp($point_2) {
     flex-direction: column;
     margin-bottom: 3rem;
@@ -34,8 +33,9 @@
 .special_single--card {
 }
 .special_card--img {
-  min-width: 38.6rem;
-  height: 38.6rem;
+	max-width: 48.8rem;
+	width: 100%;
+  height: 48.8rem;
   margin-right: 2rem;
   border-radius: 1rem;
   overflow: hidden;
@@ -49,11 +49,18 @@
   }
 }
 .special_card--content {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
 }
 .special_card--list {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+	margin-bottom: 5.5rem;
+	@include bp($point_2) {
+		margin-bottom: 3rem;
+	}
   li {
     display: inline-block;
     margin-bottom: 2rem;
@@ -90,6 +97,15 @@
       }
     }
   }
+}
+
+.singleSpecial_btn {
+	@include bp($point_2) {
+		width: 100%
+	}
+	button {
+		@include btn-standart;
+	}
 }
 .special_single--left {
   p {

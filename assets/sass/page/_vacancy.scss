@@ -1,0 +1,51 @@
+.vacancy {
+}
+.section_in {
+}
+.vacancy_main {
+	margin-bottom: 9.5rem;
+
+	h1 {
+		font-size: 3rem;
+		color: $dark;
+		margin-bottom: 4rem;
+	}
+}
+.vacancy_list {
+	li {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+}
+.vacancy_item {
+	background: $white;
+	box-shadow: .1rem -.6rem 6.1rem rgba(97, 137, 173, 0.25);
+	border-radius: 1rem;
+	padding: 3rem 4rem 4rem 3.3rem;
+	@include bp($point_2) {
+		padding: 2rem 1.5rem;
+	}
+
+	h3 {
+		font-size: 2.2rem;
+		margin-bottom: 3rem;
+		font-family: $font_2;
+		font-weight: 500;
+		@include bp($point_2) {
+			margin-bottom: 1rem;
+		}
+	}
+}
+.vacancy_item_txt {
+	margin-bottom: 4rem;
+}
+.global_txt_block {
+}
+.vacancy_item_link {
+	max-width: 30rem;
+	button {
+		@include btn-standart;
+		padding: 1.5rem 6rem;
+	}
+}

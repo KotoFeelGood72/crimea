@@ -22,40 +22,51 @@
   width: 100%;
   height: 100%;
   z-index: -1;
+	@include bp($point_6) {
+		width: 180%;
+		background-color: $white;
+	}
   img {
     @include bp($point_2) {
       width: 100%;
       height: 100%;
       object-fit: cover;
+			opacity: .5;
     }
   }
 }
 .section_in {
 }
 .hero_slide {
-  min-height: 78rem;
+	padding: 13rem 0 24.3rem 0;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   max-width: 69.4rem;
   @include bp($point_2) {
-    min-height: 30rem;
+		padding: 8rem 0;
   }
+
 
   h1 {
     font-size: 4rem;
     font-family: $font_3m;
     margin-bottom: 5.9rem;
 		color: $dark;
+		position: relative;
+		z-index: 4;
     @include bp($point_2) {
-      font-size: 1.8rem;
+      font-size: 2.6rem;
       margin-bottom: 3rem;
+			text-align: center;
     }
   }
 
   p {
     font-size: 2.3rem;
+		position: relative;
+		z-index: 4;
     @include bp($point_2) {
       font-size: 1.6rem;
       line-height: 2.1rem;
@@ -63,24 +74,28 @@
   }
 }
 
-.hero_pug  {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.hero_form {
+	position: relative;
+	z-index: 4;
+	@include bp($point_2) {
+		width: 100%;
+	}
+}
 
-  .swiper-pagination-bullet {
-    width: 1.8rem;
-    height: 1.8rem;
-    background-color: #E3E3E3;
-    opacity: 1;
-    @include bp($point_2) {
-      width: 1rem;
-      height: 1rem;
-    }
-    &-active {
-      background-color: $violet;
-    }
+.hero_form_btn {
+  button {
+    @include btn-standart;
   }
+}
+
+.hero_pug  {
+	@include pugination;
+	.swiper-pagination-bullet {
+		margin-right: 1.8rem!important;
+		&-active {
+			background-color: $violet;
+		}
+	}
 }
 .about {
 }
@@ -361,7 +376,10 @@
 }
 .rate_main {
   text-align: center;
-  margin-bottom: 4.3rem;
+  margin-bottom: 22rem;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
   h4 {
     margin-bottom: 9rem;
     @include bp($point_2) {
@@ -390,13 +408,14 @@
       padding-bottom: 2rem;
       border-radius: .5rem;
     }
-    &:nth-child(2n) {
-      a {
-        p {
-          color: #A4D86E;
-        }
-      }
-    }
+    // &:nth-child(2n) {
+    //   a {
+		// 		color: #A4D86E;
+    //     p {
+    //       color: #A4D86E;
+    //     }
+    //   }
+    // }
     p {
       padding: 0 2.8rem;
       margin-bottom: 6.8rem;
@@ -448,10 +467,12 @@
       margin-right: 1rem;
       padding-right: 0;
       color: $violet;
+			transition: all .3s ease;
 
       @include bp($point_2) {
         font-size: 1.6rem;
         padding-left: 0;
+				margin-right: 0;
       }
 
     }
@@ -493,12 +514,31 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-bottom: 14rem;
+  margin-bottom: 2rem;
   @include bp($point_2) {
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     min-height: 100%;
     padding: 5rem 0;
   }
+}
+
+.service_btn_more {
+	max-width: 37rem;
+	margin: 0 auto 13rem auto;
+	@include bp($point_2) {
+		margin: 0 auto 8rem auto;
+	}
+	button {
+		@include btn-standart;
+	}
+}
+
+.sectionTitle {
+	text-align: center;
+	margin-bottom: 1.8rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
 }
 .service_list {
   display: flex;
@@ -594,7 +634,7 @@
     padding-left: 2rem;
     text-align: left;
     @include bp($point_2) {
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
       padding-left: 0;
       text-align: center;
     }
@@ -689,7 +729,7 @@
   align-items: center;
   margin-bottom: 7.4rem;
   @include bp($point_2) {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
   }
   .swiper-pagination-bullet {
     width: 1.5rem;
@@ -728,7 +768,7 @@
     margin-bottom: 8rem;
   }
   h5 {
-    margin-bottom: 9rem;
+    margin-bottom: 5.7rem;
     text-align: left;
     @include bp($point_2) {
       margin-bottom: 5rem;
@@ -867,7 +907,7 @@
     @include bp($point_2) {
       font-size: 2.6rem;
       text-align: center;
-      margin-bottom: 5rem;
+      margin-bottom: 4rem;
     }
   }
 }
@@ -894,6 +934,8 @@
   }
 }
 .home_news--img {
+	border-radius: 2rem 2rem 0 0;
+	overflow: hidden;
   @include bp($point_2) {
     width: 100%;
     height: 20rem;
@@ -1019,6 +1061,10 @@
 		padding: 1.5rem 3rem;
 		border: .1rem solid #CCCCCC;
 		font-size: 2rem;
+		@include bp($point_2) {
+			font-size: 1.6rem;
+			padding: 1.2rem 2rem;
+		}
 	}
 	margin-bottom: 2rem;
 }
@@ -1026,4 +1072,37 @@
 .hero_form_check {
 	@include checks;
 	margin: 1rem 0 3rem 0;
+}
+
+.documents_pug  {
+	@include pugination;
+	.swiper-pagination-bullet {
+		width: 1.5rem;
+		height: 1.5rem;
+		@include bp($point_2) {
+			width: .8rem;
+			height: .8rem;
+			margin-right: 1rem;
+		}
+	}
+}
+
+.documents_slider  {
+	margin-bottom: 7rem;
+	@include bp($point_2) {
+		margin-bottom: 3rem;
+	}
+}
+
+.documents_slider_w {
+	margin-bottom: 9.5rem;
+	@include bp($point_2) {
+		margin-bottom: 8rem;
+	}
+}
+.documents_title {
+	margin-bottom: 9rem;
+	@include bp($point_2) {
+		margin-bottom: 4rem;
+	}
 }

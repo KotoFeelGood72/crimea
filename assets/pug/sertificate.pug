@@ -1,0 +1,15 @@
+extends _layout
+
+block vars
+	- array = {body_class:'', layout_mod:'', sub_keywords:'', title_inner:'Sertificate of the page'}
+block content_block
+	+bread(['Главная'], 'Сертификаты')
+	section.sert 
+		.section_in 
+			.sert_main 
+				h1 Сертификаты
+				ul.sert_grid
+					-for(i = 0; i < 8; i++)
+						li 
+							a(href="i/documents.jpg" data-fancybox)
+								img(src="i/documents.jpg", alt="") 

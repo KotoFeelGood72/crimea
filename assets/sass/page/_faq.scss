@@ -4,7 +4,7 @@
 }
 .faq_main {
   display: flex;
-  margin-bottom: 12rem;
+  margin-bottom: 9.5rem;
   @include bp($point_2) {
     margin-bottom: 8rem;
   }
@@ -12,8 +12,7 @@
 .faq_filter--main  {
   display: flex;
   flex-direction: row;
-  margin-right: 0;
-  margin-bottom: 6.2rem;
+	margin: 0 0 4rem 0;
   @include bp($point_2) {
     width: 100%;
     flex-direction: column;
@@ -84,7 +83,6 @@
   }
 }
 .faq_txt {
-  font-family: $font_11;
   display: none;
   padding-bottom: 2rem;
   &.active {
@@ -286,4 +284,19 @@
 
 .choices__list--dropdown .choices__item--selectable:after {
   display: none!important;
+}
+
+.faq_ask_action {
+	margin-bottom: 6rem;
+	button {
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		p {
+			font-family: $font_3;
+			color: $violet;
+			margin-right: 0.9rem;
+		}
+	}
 }

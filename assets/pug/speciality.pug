@@ -7,8 +7,6 @@ block content_block
 	section.news 
 		.section_in 
 			.news_main 
-				//- .news_sidebar 
-				//- 	include global/sidebar
 				.news_content 
 					h1 Специалисты
 					.special_filter 
@@ -19,11 +17,6 @@ block content_block
 								option(value="Хирург") Хирург  
 								option(value="Гинеколог") Гинеколог  
 								option(value="Невролог") Невролог 
-							select.special_select-2(name="city")
-								option(value="" selected) Выберите филиал
-								option(value="Симферополь") Симферополь
-								option(value="Феодосия") Феодосия  
-								option(value="Великий Новгород") Великий Новгород  
 							select.special_select-3(name="special")
 								option(value="" selected) Выберите подразделение
 								option(value="Уролог") Уролог
@@ -31,7 +24,7 @@ block content_block
 								option(value="Гинеколог") Гинеколог  
 								option(value="Невролог") Невролог
 						.special_filter--btn 
-							a(href="#") Найти 
+							button(type="submit") Найти 
 					ul.news_grid.speciality_list 
 						-
 							var newsGrid = [

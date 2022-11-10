@@ -24,6 +24,7 @@
 
 @import "plugins/choices.min";
 @import "plugins/swiper-bundle";
+@import "plugins/fancybox";
 
 // page
 
@@ -36,6 +37,14 @@
 @import "page/single-spec";
 @import "page/contacts";
 @import "page/faq";
+@import "page/record";
+@import "page/fund";
+@import "page/sertificate";
+@import "page/reviews";
+@import "page/vacancy";
+@import "page/about";
+@import "page/policy";
+@import "page/not-found";
 
 // Templates
 
@@ -43,3 +52,6 @@
 @import "templates/sidebar";
 @import "templates/map";
 @import "templates/popup";
+@import "templates/close";
+@import "templates/succes";
+// @import "templates/backTop";

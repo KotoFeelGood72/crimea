@@ -116,7 +116,7 @@
   padding: 4.3rem 10.2rem 5.2rem 10.2rem;
   display: flex;
   border-radius: 1rem;
-  margin-bottom: 10rem;
+  margin-bottom: 9.5rem;
   @include bp($point_2) {
     flex-direction: column;
     padding: 2rem 1.5rem;
@@ -193,10 +193,11 @@
   @include btn_i;
   justify-content: center;
   align-items: center;
+	width: 100%;
   @include bp($point_2) {
     margin-top: 1rem;
   }
-  input {
+  button {
     min-height: 5.2rem;
     font-size: 1.8rem;
     @include bp($point_2) {
