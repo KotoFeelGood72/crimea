@@ -2,7 +2,7 @@ node_modules/
 /node_modules
 .idea/
 build/
-dist/
+# dist/
 source/
 test/
 .env
